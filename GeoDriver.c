@@ -3,13 +3,25 @@
 #include <stdio.h>
 
 void main(){
-	float* answer = 0;
-	float* volume = 0;
 
-	sphere(17.583, *answer, *volume);
+	int numFloats = 5;
+	float userAnswer = 0.0;
+	float userVolume = 0.0;
+	float arr[] = {15, 6, 12, 3, 5};
+
+	sphere(17.583, &userAnswer, &userVolume);
 	float result = volCylinder(13.35, 3.71);
+	double sinR = sin(45);
 
-	printf("Surface Area: %f", *answer);
-	printf("\nVolume: %f", *volume);
+	printf("Surface Area: %f", userAnswer);
+	printf("\nVolume: %f", userVolume);
 	printf("\nVolume of the Cylinder: %f\n", result);
+	printf("\n");
+	printArray(arr, numFloats);
+	printf("\n");
+	float sum = sumFloats(arr, numFloats);
+	printf("The sum of all elements: %f", sum);
+	printf("\nAngle: %f\n", sinR);
 }
+
+
