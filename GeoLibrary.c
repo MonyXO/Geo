@@ -47,31 +47,6 @@ float sumFloats(float x[], int numFloats){
 	return sum;
 }
 
-double sin(float degrees){
-	float x = degrees * M_PI / 180;
-	do{
-		previousTotal = total;
-
-		term = pow(x, 2 * i - 1) / fact(2 * i - 1);
-
-		if(i % 2 == 0){
-			term = -term;
-		}
-		total += term;
-		i++;
-	} while(abs(total - previousTotal) > 0.000001);
-	return total;
-}
-
-double fact(int n){
-	double produce = 1;
-	int i;
-	for(i = 1; i <= n; i++){
-		product *= i;
-	}
-	return product;
-}
-
 void printArray(float x[], int size){
 	int i;
 	for(i = 0; i < size; i++){
